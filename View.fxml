@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="626.0" prefWidth="663.0">
+         <children>
+            <ImageView fitHeight="645.0" fitWidth="658.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\Users\2019A00307\Desktop\dice\backimge.png" />
+               </image>
+            </ImageView>
+          <AnchorPane layoutX="654.0" layoutY="16.0" minHeight="0.0" minWidth="0.0" prefHeight="602.0" prefWidth="267.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4977c" height="647.0" layoutX="-12.0" layoutY="-19.0" stroke="WHITE" strokeType="INSIDE" width="288.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4d5" height="622.0" layoutX="3.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="259.0" />
+                  <ListView fx:id="yutList" layoutX="14.0" layoutY="273.0" onMouseClicked="#listViewSetOnMouseClicked" prefHeight="124.0" prefWidth="74.0" />
+                  <Label layoutX="28.0" layoutY="432.0" prefHeight="29.0" prefWidth="74.0" text="플레이어1" />
+                  <Label fx:id="player1PieceStatus" layoutX="50.0" layoutY="457.0" prefHeight="29.0" prefWidth="206.0" />
+                  <Label layoutX="29.0" layoutY="481.0" prefHeight="29.0" prefWidth="74.0" text="플레이어2" />
+                  <Label fx:id="player2PieceStatus" layoutX="50.0" layoutY="506.0" prefHeight="29.0" prefWidth="206.0" />
+                  <Label layoutX="29.0" layoutY="530.0" prefHeight="29.0" prefWidth="74.0" text="플레이어3" />
+                  <Label fx:id="player3PieceStatus" layoutX="50.0" layoutY="552.0" prefHeight="29.0" prefWidth="206.0" />
+                  <Label layoutX="29.0" layoutY="580.0" prefHeight="29.0" prefWidth="74.0" text="플레이어4" />
+                  <Label fx:id="player4PieceStatus" layoutX="50.0" layoutY="602.0" prefHeight="29.0" prefWidth="206.0" />
+                  <Circle fx:id="p1Color" fill="WHITE" layoutX="18.0" layoutY="447.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="p2Color" fill="WHITE" layoutX="19.0" layoutY="496.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="p3Color" fill="WHITE" layoutX="19.0" layoutY="545.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="p4Color" fill="WHITE" layoutX="19.0" layoutY="595.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Button fx:id="newPiece" stylesheets="@application.css" layoutX="133.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#newPieceClicked" prefHeight="29.0" prefWidth="86.0" text="말 출발" />
+                  <ImageView fx:id="randomyoot" fitHeight="133.0" fitWidth="151.0" layoutX="97.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Yoot_project/src/application/dice0.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="chat" stylesheets="@application.css" layoutX="28.0" layoutY="232.0" mnemonicParsing="false" onAction="#doChat" prefHeight="22.0" prefWidth="190.0" text="채팅하기" />
+                  <Button fx:id="startGame" stylesheets="@application.css" layoutX="184.0" layoutY="55.0" mnemonicParsing="false" onAction="#startGameButtonClicked" text="시작" textOverrun="CLIP" />
+                  <TextField fx:id="playerNumInput" layoutX="72.0" layoutY="14.0" prefHeight="29.0" prefWidth="100.0" />
+                  <TextField fx:id="pieceNumInput" layoutX="72.0" layoutY="52.0" prefHeight="29.0" prefWidth="100.0" />
+                  <Label layoutX="27.0" layoutY="22.0" text="인원" />
+                  <Label layoutX="27.0" layoutY="59.0" text="말수" />
+                  <Button fx:id="rollYut" stylesheets="@application.css" layoutX="27.0" layoutY="187.0" mnemonicParsing="false" onAction="#rollYutButtonClicked" prefHeight="29.0" prefWidth="86.0" text="윷던지기" />
+                  <Label fx:id="showPlayerTurn" layoutX="25.0" layoutY="96.0" prefHeight="76.0" prefWidth="214.0" />
+               </children>
+            </AnchorPane>
+            <Line endX="357.0" endY="-221.0" layoutX="169.0" layoutY="336.0" startX="-53.0" startY="186.0" />
+            <Line endX="347.70709228515625" endY="176.70709228515625" layoutX="179.0" layoutY="346.0" startX="-63.70709228515625" startY="-231.70709228515625" />
+            <Line endX="337.0" endY="206.0" layoutX="179.0" layoutY="346.0" startX="-51.0" startY="206.0" />
+            <Line endX="337.0" endY="206.0" layoutX="178.0" layoutY="-121.0" startX="-51.0" startY="206.0" />
+            <Line endX="370.0" endY="153.0" layoutX="189.0" layoutY="356.0" startX="370.0" startY="-228.0" />
+            <Line endX="370.0" endY="157.0" layoutX="-285.0" layoutY="352.0" startX="370.0" startY="-228.0" />
+            <Circle fx:id="square6" fill="WHITE" layoutX="559.0" layoutY="85.0" onMouseClicked="#boardOnMouseClicked" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square11" fill="WHITE" layoutX="85.0" layoutY="85.0" onMouseClicked="#boardOnMouseClicked" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square16" fill="WHITE" layoutX="85.0" layoutY="552.0" onMouseClicked="#boardOnMouseClicked" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square10" fill="WHITE" layoutX="191.0" layoutY="85.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square9" fill="WHITE" layoutX="287.0" layoutY="85.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square8" fill="WHITE" layoutX="376.0" layoutY="85.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square7" fill="WHITE" layoutX="463.0" layoutY="85.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square5" fill="WHITE" layoutX="559.0" layoutY="186.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square4" fill="WHITE" layoutX="559.0" layoutY="272.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square2" fill="WHITE" layoutX="559.0" layoutY="448.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square3" fill="WHITE" layoutX="559.0" layoutY="356.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square12" fill="WHITE" layoutX="85.0" layoutY="186.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square13" fill="WHITE" layoutX="85.0" layoutY="272.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square14" fill="WHITE" layoutX="85.0" layoutY="358.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square15" fill="WHITE" layoutX="85.0" layoutY="448.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square17" fill="WHITE" layoutX="191.0" layoutY="552.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square18" fill="WHITE" layoutX="287.0" layoutY="552.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square19" fill="WHITE" layoutX="376.0" layoutY="552.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square20" fill="WHITE" layoutX="463.0" layoutY="552.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square23" fill="WHITE" layoutX="321.0" layoutY="319.0" onMouseClicked="#boardOnMouseClicked" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square21" fill="WHITE" layoutX="470.0" layoutY="170.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square22" fill="WHITE" layoutX="404.0" layoutY="238.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square24" fill="WHITE" layoutX="240.0" layoutY="400.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square25" fill="WHITE" layoutX="169.0" layoutY="470.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square27" fill="WHITE" layoutX="243.0" layoutY="238.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square26" fill="WHITE" layoutX="171.0" layoutY="170.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square29" fill="WHITE" layoutX="473.0" layoutY="470.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square28" fill="WHITE" layoutX="404.0" layoutY="400.0" onMouseClicked="#boardOnMouseClicked" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square6_5" fill="WHITE" layoutX="550.0" layoutY="99.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square6_4" fill="WHITE" layoutX="568.0" layoutY="99.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square6_1" fill="WHITE" layoutX="543.0" layoutY="83.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square6_2" fill="WHITE" layoutX="558.0" layoutY="71.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square6_3" fill="WHITE" layoutX="574.0" layoutY="83.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square7_5" fill="WHITE" layoutX="455.0" layoutY="99.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square7_4" fill="WHITE" layoutX="473.0" layoutY="99.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square7_1" fill="WHITE" layoutX="448.0" layoutY="83.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square7_2" fill="WHITE" layoutX="463.0" layoutY="71.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square7_3" fill="WHITE" layoutX="479.0" layoutY="83.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square8_5" fill="WHITE" layoutX="368.0" layoutY="100.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square8_4" fill="WHITE" layoutX="386.0" layoutY="100.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square8_1" fill="WHITE" layoutX="361.0" layoutY="84.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square8_2" fill="WHITE" layoutX="376.0" layoutY="72.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square8_3" fill="WHITE" layoutX="392.0" layoutY="84.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square9_5" fill="WHITE" layoutX="279.0" layoutY="100.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square9_4" fill="WHITE" layoutX="297.0" layoutY="100.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square9_1" fill="WHITE" layoutX="272.0" layoutY="84.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square9_2" fill="WHITE" layoutX="287.0" layoutY="72.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square9_3" fill="WHITE" layoutX="303.0" layoutY="84.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square10_5" fill="WHITE" layoutX="183.0" layoutY="100.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square10_4" fill="WHITE" layoutX="201.0" layoutY="100.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square10_1" fill="WHITE" layoutX="176.0" layoutY="84.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square10_2" fill="WHITE" layoutX="191.0" layoutY="72.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square10_3" fill="WHITE" layoutX="207.0" layoutY="84.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square11_5" fill="WHITE" layoutX="76.0" layoutY="100.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square11_4" fill="WHITE" layoutX="94.0" layoutY="100.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square11_1" fill="WHITE" layoutX="69.0" layoutY="84.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square11_2" fill="WHITE" layoutX="84.0" layoutY="72.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square11_3" fill="WHITE" layoutX="100.0" layoutY="84.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square21_5" fill="WHITE" layoutX="462.0" layoutY="184.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square21_4" fill="WHITE" layoutX="480.0" layoutY="184.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square21_1" fill="WHITE" layoutX="455.0" layoutY="168.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square21_2" fill="WHITE" layoutX="470.0" layoutY="156.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square21_3" fill="WHITE" layoutX="486.0" layoutY="168.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square22_5" fill="WHITE" layoutX="396.0" layoutY="252.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square22_4" fill="WHITE" layoutX="414.0" layoutY="252.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square22_1" fill="WHITE" layoutX="389.0" layoutY="236.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square22_2" fill="WHITE" layoutX="404.0" layoutY="224.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square22_3" fill="WHITE" layoutX="420.0" layoutY="236.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square5_5" fill="WHITE" layoutX="550.0" layoutY="200.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square5_4" fill="WHITE" layoutX="568.0" layoutY="200.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square5_1" fill="WHITE" layoutX="543.0" layoutY="184.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square5_2" fill="WHITE" layoutX="558.0" layoutY="172.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square5_3" fill="WHITE" layoutX="574.0" layoutY="184.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square4_5" fill="WHITE" layoutX="550.0" layoutY="286.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square4_4" fill="WHITE" layoutX="568.0" layoutY="286.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square4_1" fill="WHITE" layoutX="543.0" layoutY="270.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square4_2" fill="WHITE" layoutX="558.0" layoutY="258.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square4_3" fill="WHITE" layoutX="574.0" layoutY="270.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square3_5" fill="WHITE" layoutX="551.0" layoutY="370.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square3_4" fill="WHITE" layoutX="569.0" layoutY="370.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square3_2" fill="WHITE" layoutX="559.0" layoutY="342.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square3_3" fill="WHITE" layoutX="575.0" layoutY="354.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square2_5" fill="WHITE" layoutX="550.0" layoutY="462.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square1" fill="WHITE" layoutX="559.0" layoutY="552.0" onMouseClicked="#boardOnMouseClicked" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square3_1" fill="WHITE" layoutX="544.0" layoutY="354.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square20_1" fill="WHITE" layoutX="448.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square20_3" fill="WHITE" layoutX="479.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square19_5" fill="WHITE" layoutX="367.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square19_4" fill="WHITE" layoutX="385.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square19_1" fill="WHITE" layoutX="360.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square19_2" fill="WHITE" layoutX="375.0" layoutY="538.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square19_3" fill="WHITE" layoutX="391.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square2_4" fill="WHITE" layoutX="568.0" layoutY="462.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square2_1" fill="WHITE" layoutX="543.0" layoutY="446.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square2_2" fill="WHITE" layoutX="558.0" layoutY="434.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square2_3" fill="WHITE" layoutX="574.0" layoutY="446.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square1_5" fill="WHITE" layoutX="550.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square1_4" fill="WHITE" layoutX="568.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square1_1" fill="WHITE" layoutX="543.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square1_2" fill="WHITE" layoutX="558.0" layoutY="538.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square1_3" fill="WHITE" layoutX="574.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square23_5" fill="WHITE" layoutX="313.0" layoutY="331.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square23_4" fill="WHITE" layoutX="331.0" layoutY="331.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square23_1" fill="WHITE" layoutX="306.0" layoutY="315.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square23_2" fill="WHITE" layoutX="321.0" layoutY="303.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square23_3" fill="WHITE" layoutX="337.0" layoutY="315.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square27_5" fill="WHITE" layoutX="235.0" layoutY="252.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square27_4" fill="WHITE" layoutX="253.0" layoutY="252.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square27_1" fill="WHITE" layoutX="228.0" layoutY="236.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square27_2" fill="WHITE" layoutX="243.0" layoutY="224.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square27_3" fill="WHITE" layoutX="259.0" layoutY="236.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square26_5" fill="WHITE" layoutX="163.0" layoutY="184.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square26_4" fill="WHITE" layoutX="181.0" layoutY="184.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square26_1" fill="WHITE" layoutX="156.0" layoutY="168.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square26_2" fill="WHITE" layoutX="171.0" layoutY="156.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square26_3" fill="WHITE" layoutX="187.0" layoutY="168.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square29_5" fill="WHITE" layoutX="465.0" layoutY="483.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square29_4" fill="WHITE" layoutX="483.0" layoutY="483.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square29_1" fill="WHITE" layoutX="458.0" layoutY="467.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square29_2" fill="WHITE" layoutX="473.0" layoutY="455.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square29_3" fill="WHITE" layoutX="489.0" layoutY="467.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square28_5" fill="WHITE" layoutX="395.0" layoutY="414.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square28_4" fill="WHITE" layoutX="413.0" layoutY="414.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square28_1" fill="WHITE" layoutX="388.0" layoutY="398.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square28_2" fill="WHITE" layoutX="403.0" layoutY="386.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square28_3" fill="WHITE" layoutX="419.0" layoutY="398.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square24_5" fill="WHITE" layoutX="232.0" layoutY="414.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square24_4" fill="WHITE" layoutX="250.0" layoutY="414.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square24_1" fill="WHITE" layoutX="225.0" layoutY="398.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square24_2" fill="WHITE" layoutX="240.0" layoutY="386.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square24_3" fill="WHITE" layoutX="256.0" layoutY="398.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square25_5" fill="WHITE" layoutX="161.0" layoutY="484.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square25_4" fill="WHITE" layoutX="179.0" layoutY="484.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square25_1" fill="WHITE" layoutX="154.0" layoutY="468.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square25_2" fill="WHITE" layoutX="169.0" layoutY="456.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square25_3" fill="WHITE" layoutX="185.0" layoutY="468.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square20_5" fill="WHITE" layoutX="455.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square20_4" fill="WHITE" layoutX="473.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square20_2" fill="WHITE" layoutX="463.0" layoutY="538.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square18_5" fill="WHITE" layoutX="277.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square18_4" fill="WHITE" layoutX="295.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square18_1" fill="WHITE" layoutX="270.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square18_2" fill="WHITE" layoutX="285.0" layoutY="538.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square18_3" fill="WHITE" layoutX="301.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square17_5" fill="WHITE" layoutX="182.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square17_4" fill="WHITE" layoutX="200.0" layoutY="566.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square17_1" fill="WHITE" layoutX="175.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square17_2" fill="WHITE" layoutX="190.0" layoutY="538.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square17_3" fill="WHITE" layoutX="206.0" layoutY="550.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square16_5" fill="WHITE" layoutX="77.0" layoutY="564.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square16_4" fill="WHITE" layoutX="95.0" layoutY="564.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square16_1" fill="WHITE" layoutX="70.0" layoutY="548.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square16_2" fill="WHITE" layoutX="85.0" layoutY="536.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square16_3" fill="WHITE" layoutX="101.0" layoutY="548.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square12_5" fill="WHITE" layoutX="77.0" layoutY="200.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square12_4" fill="WHITE" layoutX="95.0" layoutY="200.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square12_1" fill="WHITE" layoutX="70.0" layoutY="184.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square12_2" fill="WHITE" layoutX="85.0" layoutY="172.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square12_3" fill="WHITE" layoutX="101.0" layoutY="184.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square13_5" fill="WHITE" layoutX="76.0" layoutY="284.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square13_4" fill="WHITE" layoutX="94.0" layoutY="284.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square13_1" fill="WHITE" layoutX="69.0" layoutY="268.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square13_2" fill="WHITE" layoutX="84.0" layoutY="256.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square13_3" fill="WHITE" layoutX="100.0" layoutY="268.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square14_5" fill="WHITE" layoutX="76.0" layoutY="372.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square14_4" fill="WHITE" layoutX="94.0" layoutY="372.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square14_2" fill="WHITE" layoutX="84.0" layoutY="344.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square14_3" fill="WHITE" layoutX="100.0" layoutY="356.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square15_5" fill="WHITE" layoutX="77.0" layoutY="460.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square15_4" fill="WHITE" layoutX="95.0" layoutY="460.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square15_1" fill="WHITE" layoutX="70.0" layoutY="444.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square14_1" fill="WHITE" layoutX="69.0" layoutY="356.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square15_3" fill="WHITE" layoutX="101.0" layoutY="444.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="square15_2" fill="WHITE" layoutX="85.0" layoutY="432.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>

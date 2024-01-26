@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edece5" height="388.0" layoutX="6.0" layoutY="6.0" stroke="#abb3a2" strokeType="INSIDE" width="344.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="373.0" layoutX="15.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" width="325.0" />
+      <Label layoutX="82.0" layoutY="276.0" text="닉네임" />
+      <TextField layoutX="142.0" layoutY="272.0" prefHeight="22.0" prefWidth="132.0" />
+      <Button fx:id="Start" stylesheets="@application.css" layoutX="102.0" layoutY="331.0" mnemonicParsing="false" onAction="#switchToGame" prefHeight="43.0" prefWidth="155.0" text="시작하기" textOverrun="CLIP" />
+      <ImageView fitHeight="156.0" fitWidth="239.0" layoutX="59.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="application/First1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="208.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="application/First0.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="97.0" layoutY="34.0" prefHeight="70.0" prefWidth="162.0" text="윷놀이 게임" textFill="#3f3e38">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
