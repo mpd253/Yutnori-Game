@@ -1,5 +1,6 @@
-# 윷놀이 게임
+# JavaFX Yutnori-Game
 
+<br /><br />
 Yutnori Diagram 
 -----------------------
 ![image](https://user-images.githubusercontent.com/75960352/192252592-3105ddb2-24d6-4ac6-920b-fb432e9e70d1.png)
